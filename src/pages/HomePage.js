@@ -86,6 +86,7 @@ function HomePage() {
 function applyFilter(products, filters) {
   const { sortBy } = filters;
   let filteredProducts = products;
+  console.log(`filter is `, filters);
 
   // SORT BY
   if (sortBy === "featured") {

@@ -25,6 +25,7 @@ export const FILTER_PRICE_OPTIONS = [
 ];
 
 function ProductFilter({ resetFilter }) {
+  console.log(resetFilter);
   return (
     <Stack spacing={3} sx={{ p: 3, width: 250 }}>
       <Stack spacing={1}>
@@ -63,10 +64,12 @@ function ProductFilter({ resetFilter }) {
       <Box>
         <Button
           size="large"
-          type="submit"
+          type="button"
           color="inherit"
           variant="outlined"
-          onClick={resetFilter}
+          onClick={() => {
+            resetFilter();
+          }}
           startIcon={<ClearAllIcon />}
         >
           Clear All
